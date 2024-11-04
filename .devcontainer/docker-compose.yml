@@ -1,0 +1,13 @@
+services:
+  workspace:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: rust-image
+    container_name: rust-container
+    volumes:
+      - ..:/rust-docker
+    working_dir: /rust-docker
+    command: /bin/sh
+    tty: true
+
